@@ -51,7 +51,7 @@ public class SetFeaturesProcessorTest extends AbstractMapfishSpringTest {
         assertEquals(1, layerGraphics.size());
 
 //        Files.copy(new File(layerGraphics.get(0)), new File(TMP, getClass().getSimpleName()+".tiff"));
-        new ImageSimilarity(new File(layerGraphics.get(0)), 2).assertSimilarity(getFile(BASE_DIR + "expectedSimpleImage.tiff"), 0);
+        new ImageSimilarity(new File(layerGraphics.get(0))).assertSimilarity(getFile(BASE_DIR + "expectedSimpleImage.tiff"), 0);
     }
 
     public static PJsonObject loadJsonRequestData() throws IOException {

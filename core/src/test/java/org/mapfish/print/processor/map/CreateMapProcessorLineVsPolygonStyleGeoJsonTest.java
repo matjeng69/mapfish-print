@@ -65,7 +65,7 @@ public class CreateMapProcessorLineVsPolygonStyleGeoJsonTest extends AbstractMap
 
         final BufferedImage img = ImageIO.read(new File(layerGraphics.get(0)));
 //        ImageIO.write(img, "tiff", new File("/tmp/"+getClass().getSimpleName()+".tiff"));
-        new ImageSimilarity(img, 2).assertSimilarity(getFile(BASE_DIR + "expectedSimpleImage.tiff"), 30);
+        new ImageSimilarity(img).assertSimilarity(getFile(BASE_DIR + "expectedSimpleImage.tiff"), 30);
     }
 
     public static PJsonObject loadJsonRequestData() throws IOException {

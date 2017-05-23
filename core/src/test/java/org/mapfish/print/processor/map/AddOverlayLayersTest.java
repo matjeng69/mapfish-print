@@ -104,8 +104,7 @@ public class AddOverlayLayersTest extends AbstractMapfishSpringTest {
         assertEquals(numberOfLayers, layerGraphics.size());
 
         final BufferedImage bufferedImage = ImageSimilarity.mergeImages(layerGraphics, width, height);
-//        ImageIO.write(bufferedImage, "tiff", new File("/tmp/" + imageName));
-        new ImageSimilarity(bufferedImage, 2).assertSimilarity(getFile(BASE_DIR + imageName), 40);
+        new ImageSimilarity(bufferedImage).assertSimilarity(getFile(BASE_DIR + imageName), 40);
     }
 
     private static PJsonObject loadJsonRequestData() throws IOException {

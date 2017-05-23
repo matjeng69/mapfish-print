@@ -108,7 +108,7 @@ public class CreateMapProcessorOpacityWMTSTest extends AbstractMapfishSpringTest
 
         final BufferedImage referenceImage = ImageSimilarity.mergeImages(layerGraphics, 630, 294);
 //        ImageIO.write(referenceImage, "tif", new File("/tmp/expectedSimpleImage.tiff"));
-        new ImageSimilarity(referenceImage, 2)
+        new ImageSimilarity(referenceImage)
                 .assertSimilarity(getFile(BASE_DIR + "expectedSimpleImage.tiff"), 20);
     }
 

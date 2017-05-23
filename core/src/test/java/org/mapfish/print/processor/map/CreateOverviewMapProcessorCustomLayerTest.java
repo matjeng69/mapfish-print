@@ -93,9 +93,7 @@ public class CreateOverviewMapProcessorCustomLayerTest extends AbstractMapfishSp
         assertEquals(1, layerGraphics.size());
 
         final BufferedImage actualImage = ImageSimilarity.mergeImages(layerGraphics, 300, 200);
-//        ImageSimilarity.writeUncompressedImage(actualImage, "/tmp/expectedSimpleImage.tiff");
-//        ImageIO.write(actualImage, "tiff", new File("/tmp/expectedSimpleImage.tiff"));
-        new ImageSimilarity(actualImage, 2)
+        new ImageSimilarity(actualImage)
                 .assertSimilarity(getFile(BASE_DIR + "expectedSimpleImage.tiff"), 50);
 
     }

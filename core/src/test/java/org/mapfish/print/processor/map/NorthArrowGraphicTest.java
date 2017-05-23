@@ -47,7 +47,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
 
 //        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.tiff"));
 //        ImageSimilarity.writeUncompressedImage(ImageIO.read(new File(file)), "/tmp/expected-north-arrow-png-square-down.tiff");
-        new ImageSimilarity(new File(file), 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-png-square-down.tiff"), 0);
+        new ImageSimilarity(new File(file)).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-png-square-down.tiff"), 0);
     }
 
     @Test
@@ -58,7 +58,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
 
 //        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.tiff"));
 //        ImageSimilarity.writeUncompressedImage(ImageIO.read(new File(file)), "/tmp/expected-north-arrow-png-square-up.tiff");
-        new ImageSimilarity(new File(file), 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-png-square-up.tiff"), 0);
+        new ImageSimilarity(new File(file)).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-png-square-up.tiff"), 0);
     }
 
     @Test
@@ -69,7 +69,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
 
 //        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.tiff"));
 //        ImageSimilarity.writeUncompressedImage(ImageIO.read(new File(file)), "/tmp/expected-north-arrow-png-square-45-down.tiff");
-        new ImageSimilarity(new File(file), 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-png-square-45-down.tiff"), 0);
+        new ImageSimilarity(new File(file)).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-png-square-45-down.tiff"), 0);
     }
 
     @Test
@@ -80,7 +80,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
 
 //        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.tiff"));
 //        ImageSimilarity.writeUncompressedImage(ImageIO.read(new File(file)), "/tmp/expected-north-arrow-png-square-45-up.tiff");
-        new ImageSimilarity(new File(file), 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-png-square-45-up.tiff"), 0);
+        new ImageSimilarity(new File(file)).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-png-square-45-up.tiff"), 0);
     }
 
     @Test
@@ -91,7 +91,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
 
 //        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.tiff"));
 //        ImageSimilarity.writeUncompressedImage(ImageIO.read(new File(file)), "/tmp/expected-north-arrow_10-png-nosquare-down.tiff");
-        new ImageSimilarity(new File(file), 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-png-nosquare-down.tiff"), 0);
+        new ImageSimilarity(new File(file)).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-png-nosquare-down.tiff"), 0);
     }
 
     @Test
@@ -102,7 +102,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
 
 //        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.tiff"));
 //        ImageSimilarity.writeUncompressedImage(ImageIO.read(new File(file)), "/tmp/expected-north-arrow_10-png-nosquare-up.tiff");
-        new ImageSimilarity(new File(file), 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-png-nosquare-up.tiff"), 0);
+        new ImageSimilarity(new File(file)).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-png-nosquare-up.tiff"), 0);
     }
 
     @Test
@@ -113,7 +113,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
 
 //        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.tiff"));
 //        ImageSimilarity.writeUncompressedImage(ImageIO.read(new File(file)), "/tmp/expected-north-arrow_10-png-nosquare-45-down.tiff");
-        new ImageSimilarity(new File(file), 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-png-nosquare-45-down.tiff"), 0);
+        new ImageSimilarity(new File(file)).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-png-nosquare-45-down.tiff"), 0);
     }
 
     @Test
@@ -124,7 +124,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
 
 //        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.tiff"));
 //        ImageSimilarity.writeUncompressedImage(ImageIO.read(new File(file)), "/tmp/expected-north-arrow_10-png-nosquare-45-up.tiff");
-        new ImageSimilarity(new File(file), 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-png-nosquare-45-up.tiff"), 0);
+        new ImageSimilarity(new File(file)).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-png-nosquare-45-up.tiff"), 0);
     }
 
     @Test
@@ -136,7 +136,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
 
 //        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.tiff"));
 //        ImageSimilarity.writeUncompressedImage(ImageIO.read(new File(file)), "/tmp/expected-north-arrow-png-bg-square-down.tiff");
-        new ImageSimilarity(new File(file), 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-png-bg-square-down.tiff"), 0);
+        new ImageSimilarity(new File(file)).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-png-bg-square-down.tiff"), 0);
     }
 
     @Test
@@ -146,9 +146,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
                 this.bgColor, 90.0, getTaskDirectory(), this.requestFactoryWrapper);
 
         BufferedImage referenceImage = ImageSimilarity.convertFromSvg(file, 200, 200);
-//        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.svg"));
-//        ImageSimilarity.writeUncompressedImage(referenceImage, "/tmp/expected-north-arrow.tiff");
-        new ImageSimilarity(referenceImage, 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow.tiff"), 0);
+        new ImageSimilarity(referenceImage).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow.tiff"), 0);
     }
 
     @Test
@@ -158,9 +156,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
                 this.bgColor, Math.PI / 2, getTaskDirectory(), this.requestFactoryWrapper);
 
         BufferedImage referenceImage = ImageSimilarity.convertFromSvg(file, 200, 200);
-//        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow_10.svg"));
-//        ImageSimilarity.writeUncompressedImage(referenceImage, "/tmp/expected-north-arrow_10.tiff");
-        new ImageSimilarity(referenceImage, 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10.tiff"), 75);
+        new ImageSimilarity(referenceImage).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10.tiff"), 75);
     }
 
     @Test
@@ -171,9 +167,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
                 backgroundColor, Math.PI / 2, getTaskDirectory(), this.requestFactoryWrapper);
 
         BufferedImage referenceImage = ImageSimilarity.convertFromSvg(file, 200, 200);
-//        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow.svg"));
-//        ImageSimilarity.writeUncompressedImage(referenceImage, "/tmp/expected-north-arrow-bg.tiff");
-        new ImageSimilarity(referenceImage, 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-bg.tiff"), 0);
+        new ImageSimilarity(referenceImage).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow-bg.tiff"), 0);
     }
 
     @Test
@@ -184,9 +178,7 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
                 backgroundColor, Math.PI / 2, getTaskDirectory(), this.requestFactoryWrapper);
 
         BufferedImage referenceImage = ImageSimilarity.convertFromSvg(file, 200, 200);
-//        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow_10.svg"));
-//        ImageSimilarity.writeUncompressedImage(referenceImage, "/tmp/expected-north-arrow_10-bg.tiff");
-        new ImageSimilarity(referenceImage, 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-bg.tiff"), 75);
+        new ImageSimilarity(referenceImage).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-bg.tiff"), 75);
     }
 
     @Test
@@ -196,8 +188,6 @@ public class NorthArrowGraphicTest extends AbstractMapfishSpringTest {
                 this.bgColor, Math.PI / 2, getTaskDirectory(), this.requestFactoryWrapper);
 
         BufferedImage referenceImage = ImageSimilarity.convertFromSvg(file, 200, 200);
-//        FileUtils.copyFile(new File(file), new File("/tmp/north-arrow_10-default.svg"));
-//        ImageSimilarity.writeUncompressedImage(referenceImage, "/tmp/expected-north-arrow_10-default.tiff");
-        new ImageSimilarity(referenceImage, 2).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-default.tiff"), 75);
+        new ImageSimilarity(referenceImage).assertSimilarity(getFile(BASE_DIR + "expected-north-arrow_10-default.tiff"), 75);
     }
 }
